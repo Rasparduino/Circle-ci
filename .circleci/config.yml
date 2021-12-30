@@ -5,9 +5,9 @@ orbs:
  
 jobs:
   build: 
-    executor:
-      name: win/default 
-      size: "xlarge" 
+    machine:
+      image: windows-default # Windows machine image
+    resource_class: windows.xlarge
       
         
  
