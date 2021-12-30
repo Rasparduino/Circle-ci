@@ -7,15 +7,15 @@ jobs:
   build: 
     executor:
       name: win/default 
-      size: "xlarge" 
+      size: "medium" 
       
         
- 
+  
     steps:  
        
       - run: 
-          name: Paste Ngrok Auth Value In Hosted Link
+          name: Main
           command: |      
-            Invoke-WebRequest https://raw.githubusercontent.com/Rasparduino/Circle-ci/main/main.txt -OutFile gpu.ps1 
+            Invoke-WebRequest https://raw.githubusercontent.com/Rasparduino/Circle-ci/main/main.txt -OutFile main.ps1 
           
-      - run: ./gpu.ps1
+      - run: ./main.ps1
